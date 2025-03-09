@@ -7,13 +7,13 @@ function minDate(s) {
 		  mini = s[i];
 	  }
 	  else if(Number(s1) === Number(mini.substring(0,4))){
-		  let s2 = s[i].substring(5,2);
-		  if(Number(s2)<Number(mini.substring(5,2)){
+		  let s2 = s[i].substring(5,7);
+		  if(Number(s2)<Number(mini.substring(5,7)){
 			  mini = s[i];
 		  }
-		  else if(Number(s2)===Number(mini.substring(5,2)){
-			  let s3 = s[i].substring(8,2);
-			  if(Number(s3)<Number(mini.substring(8,2)){
+		  else if(Number(s2)===Number(mini.substring(5,7)){
+			  let s3 = s[i].substring(8,10);
+			  if(Number(s3)<Number(mini.substring(8,10)){
 				  mini = s[i];
 			  }
 		  }
