@@ -1,29 +1,31 @@
 function minDate(s) {
-  //write you code here
   let mini = s[0]; 
-  for(let i =1 ; i<s.length ; i++){
-	  let s1 = s[i].substring(0,4);
-	  if(Number(s1)<Number(mini.substring(0,4))){
-		  mini = s[i];
-	  }
-	  else if(Number(s1) === Number(mini.substring(0,4))){
-		  let s2 = s[i].substring(5,7);
-		  if(Number(s2)<Number(mini.substring(5,7)){
-			  mini = s[i];
-		  }
-		  else if(Number(s2)===Number(mini.substring(5,7)){
-			  let s3 = s[i].substring(8,10);
-			  if(Number(s3)<Number(mini.substring(8,10)){
-				  mini = s[i];
-			  }
-		  }
-	  }
+  for (let i = 1; i < s.length; i++) {
+    let year1 = Number(s[i].substring(0, 4));
+    let year2 = Number(mini.substring(0, 4));
+
+    if (year1 < year2) {
+      mini = s[i];
+    } else if (year1 === year2) {
+      let month1 = Number(s[i].substring(5, 7));
+      let month2 = Number(mini.substring(5, 7));
+
+      if (month1 < month2) {
+        mini = s[i];
+      } else if (month1 === month2) {
+        let day1 = Number(s[i].substring(8, 10));
+        let day2 = Number(mini.substring(8, 10));
+
+        if (day1 < day2) {
+          mini = s[i];
+        }
+      }
+    }
   }
-	return mini;
+  return mini;
 }
 
 // Do not change the code
-
 var dates = [
   "2023/03/01",
   "2023/03/02",
