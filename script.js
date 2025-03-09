@@ -1,5 +1,25 @@
-function minDate(dates) {
+function minDate(s) {
   //write you code here
+  let mini = s[0]; 
+  for(let i =1 ; i<s.length ; i++){
+	  let s1 = s[i].substring(0,4);
+	  if(Number(s1)<Number(mini.substring(0,4))){
+		  mini = s[i];
+	  }
+	  else if(Number(s1) === Number(mini.substring(0,4))){
+		  let s2 = s[i].substring(5,2);
+		  if(Number(s2)<Number(mini.substring(5,2)){
+			  mini = s[i];
+		  }
+		  else if(Number(s2)===Number(mini.substring(5,2)){
+			  let s3 = s[i].substring(8,2);
+			  if(Number(s3)<Number(mini.substring(8,2)){
+				  mini = s[i];
+			  }
+		  }
+	  }
+  }
+	return mini;
 }
 
 // Do not change the code
